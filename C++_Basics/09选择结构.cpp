@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main09() {
 
 	int A = 0;
 	int B = 0;

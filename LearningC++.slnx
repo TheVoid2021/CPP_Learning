@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="C++_Basics/C++_Basics.vcxproj" />
+  <Project Path="C++_Cores/C++_Cores.vcxproj" />
+  <Project Path="C++_Raised/C++_Raised.vcxproj" />
+</Solution>
