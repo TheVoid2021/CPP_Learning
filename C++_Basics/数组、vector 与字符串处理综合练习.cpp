@@ -632,7 +632,7 @@ double calculateCartTotal(const vector<double>& prices)
 // 使用方式：每做完一题，就取消对应测试代码的注释。
 // ============================================================
 
-int main()
+int main170()
 {
     cout << "C++ Array / Vector / String Practice" << endl;
 

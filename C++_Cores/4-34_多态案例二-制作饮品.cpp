@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
-! 多态案例二-制作饮品
+? 多态案例二-制作饮品
 * 案例描述：
 * 制作饮品的大致流程为：煮水 -  冲泡 - 倒入杯中 - 加入辅料
 * 利用多态技术实现本案例，提供抽象制作饮品基类，提供子类制作咖啡和茶叶
@@ -12,9 +12,9 @@ using namespace std;
 class AbstractDrinking
 {
 public:
-  virtual ~AbstractDrinking() {} // ! 虚析构函数，防止内存泄漏
+  virtual ~AbstractDrinking() {} // ? 虚析构函数，防止内存泄漏
   // 烧水
-  virtual void Boil() = 0; // ! 纯虚函数
+  virtual void Boil() = 0; // ? 纯虚函数
   // 冲泡
   virtual void Brew() = 0;
   // 倒入杯中
@@ -38,22 +38,22 @@ public:
   // 烧水
   virtual void Boil()
   {
-    cout << "煮农夫山泉!" << endl;
+    cout << "煮农夫山泉?" << endl;
   }
   // 冲泡
   virtual void Brew()
   {
-    cout << "冲泡咖啡!" << endl;
+    cout << "冲泡咖啡?" << endl;
   }
   // 倒入杯中
   virtual void PourInCup()
   {
-    cout << "将咖啡倒入杯中!" << endl;
+    cout << "将咖啡倒入杯中?" << endl;
   }
   // 加入辅料
   virtual void PutSomething()
   {
-    cout << "加入牛奶!" << endl;
+    cout << "加入牛奶?" << endl;
   }
 };
 
@@ -64,22 +64,22 @@ public:
   // 烧水
   virtual void Boil()
   {
-    cout << "煮自来水!" << endl;
+    cout << "煮自来水?" << endl;
   }
   // 冲泡
   virtual void Brew()
   {
-    cout << "冲泡茶叶!" << endl;
+    cout << "冲泡茶叶?" << endl;
   }
   // 倒入杯中
   virtual void PourInCup()
   {
-    cout << "将茶水倒入杯中!" << endl;
+    cout << "将茶水倒入杯中?" << endl;
   }
   // 加入辅料
   virtual void PutSomething()
   {
-    cout << "加入枸杞!" << endl;
+    cout << "加入枸杞?" << endl;
   }
 };
 
@@ -90,17 +90,17 @@ void DoWork(AbstractDrinking *drink)
   delete drink;
 }
 
-void test01()
+void test29()
 {
   DoWork(new Coffee);
   cout << "--------------" << endl;
   DoWork(new Tea);
 }
 
-int main()
+int main39()
 {
 
-  test01();
+  test29();
 
   system("pause");
 

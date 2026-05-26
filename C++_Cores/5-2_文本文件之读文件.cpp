@@ -3,7 +3,7 @@ using namespace std;
 
 /*
 读文件与写文件步骤相似，但是读取方式相对于比较多
-! 读文件步骤如下：
+? 读文件步骤如下：
 ? 1. 包含头文件
    * \#include <fstream\>
 ? 2. 创建流对象
@@ -18,7 +18,7 @@ using namespace std;
 
 #include <fstream>
 #include <string>
-void test01()
+void test33()
 {
   ifstream ifs;
   ifs.open("test.txt", ios::in);
@@ -59,10 +59,10 @@ void test01()
   ifs.close();
 }
 
-int main()
+int main43()
 {
 
-  test01();
+  test33();
 
   system("pause");
 

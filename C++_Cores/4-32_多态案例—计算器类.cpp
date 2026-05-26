@@ -2,11 +2,11 @@
 using namespace std;
 
 /*
-! 多态案例—计算器类
+? 多态案例—计算器类
 案例描述：
 分别利用普通写法和多态技术，设计实现两个操作数进行运算的计算器类
 
-!多态的优点：
+?多态的优点：
   * 代码组织结构清晰
   * 可读性强
   * 利于前期和后期的扩展以及维护
@@ -39,7 +39,7 @@ public:
   int m_Num2;
 };
 
-void test01()
+void test26()
 {
   // 普通实现测试
   Calculator c;
@@ -61,7 +61,7 @@ public:
   /*在C++中，如果一个类有虚函数，那么它的析构函数也应该声明为虚函数。
   否则，当通过基类指针删除派生类对象时，只会调用基类的析构函数，
   而不会调用派生类的析构函数。这可能会导致资源泄漏或其他未定义行为。? */
-  virtual ~AbstractCalculator() {} // ! 声明为虚函数
+  virtual ~AbstractCalculator() {} // ? 声明为虚函数
   virtual int getResult()
   {
     return 0;
@@ -101,7 +101,7 @@ public:
   }
 };
 
-void test02()
+void test27()
 {
   // 创建加法计算器
   AbstractCalculator *abc = new AddCalculator;
@@ -125,12 +125,12 @@ void test02()
   delete abc;
 }
 
-int main()
+int main37()
 {
 
-  // test01();
+  // test26();
 
-  test02();
+  test27();
 
   system("pause");
 

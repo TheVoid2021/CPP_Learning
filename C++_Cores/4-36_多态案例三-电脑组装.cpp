@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
-! 多态案例三-电脑组装
+? 多态案例三-电脑组装
 *案例描述：*
 电脑主要组成部件为 CPU（用于计算），显卡（用于显示），内存条（用于存储）
 将每个零件封装出抽象基类，并且提供不同的厂商生产不同的零件，例如Intel厂商和Lenovo厂商
@@ -151,7 +151,7 @@ public:
   }
 };
 
-void test01()
+void test31()
 {
   // 第一台电脑零件
   CPU *intelCpu = new IntelCPU;
@@ -181,9 +181,9 @@ void test01()
   delete computer3;
 }
 
-int main()
+int main41()
 {
-  test01();
+  test31();
 
   system("pause");
   return 0;

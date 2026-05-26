@@ -1,63 +1,63 @@
 #include <iostream>
 using namespace std;
 
-// !类做友元
-class Building;
+// ?类做友元
+class Building1;
 class goodGay
 {
 public:
-  goodGay();
-  void visit();
+	  goodGay();
+	  void visit();
 
 private:
-  Building *building;
+	Building1 *building;
 };
 
-class Building
+class Building1
 {
-  // !告诉编译器 goodGay类是Building类的好朋友，可以访问到Building类中私有内容
-  friend class goodGay; // todo friend + class + 类名
+	  // ?告诉编译器 goodGay类是Building类的好朋友，可以访问到Building类中私有内容
+	  friend class goodGay; // todo friend + class + 类名
 
 public:
-  Building();
+	Building1();
 
 public:
-  string m_SittingRoom; // 客厅
+	string m_SittingRoom; // 客厅
 private:
-  string m_BedRoom; // 卧室  私有内容
+	string m_BedRoom; // 卧室  私有内容
 };
 
 // todo 类外实现成员函数Building
-Building::Building()
+Building1::Building1()
 {
-  this->m_SittingRoom = "客厅";
-  this->m_BedRoom = "卧室";
+	  this->m_SittingRoom = "客厅";
+	  this->m_BedRoom = "卧室";
 }
 
 // todo 类外实现成员函数goodGay
 goodGay::goodGay()
 {
-  building = new Building;
+	building = new Building1;
 }
 
 // todo 类外实现成员函数visit
 void goodGay::visit()
 {
-  cout << "好基友正在访问" << building->m_SittingRoom << endl;
-  cout << "好基友正在访问" << building->m_BedRoom << endl;
+	  cout << "好基友正在访问" << building->m_SittingRoom << endl;
+	  cout << "好基友正在访问" << building->m_BedRoom << endl;
 }
 
-void test01()
+void test05()
 {
-  goodGay gg;
-  gg.visit();
+	  goodGay gg;
+	  gg.visit();
 }
 
-int main()
+int main20()
 {
 
-  test01();
+	  test05();
 
-  system("pause");
-  return 0;
+	  system("pause");
+	  return 0;
 }

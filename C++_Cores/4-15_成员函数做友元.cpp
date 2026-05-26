@@ -2,69 +2,69 @@
 using namespace std;
 
 // !成员函数做友元
-class Building;
-class goodGay
+class Building2;
+class goodGay1
 {
 public:
-  goodGay();
-  void visit(); // !只让visit函数作为Building的好朋友，可以发访问Building中私有内容
-  void visit2();
+	  goodGay1();
+	  void visit(); // ?只让visit函数作为Building的好朋友，可以发访问Building中私有内容
+	  void visit2();
 
 private:
-  Building *building;
+	Building2 *building;
 };
 
-class Building
+class Building2
 {
-  // !告诉编译器  goodGay类中的visit成员函数 是Building好朋友，可以访问私有内容
-  friend void goodGay::visit();
+	  // ?告诉编译器  goodGay类中的visit成员函数 是Building好朋友，可以访问私有内容
+	  friend void goodGay1::visit();
 
 public:
-  Building();
+	Building2();
 
 public:
-  string m_SittingRoom; // 客厅
+	string m_SittingRoom; // 客厅
 private:
-  string m_BedRoom; // 卧室
+	string m_BedRoom; // 卧室
 };
 
 // todo 类外实现成员函数
-Building::Building()
+Building2::Building2()
 {
-  this->m_SittingRoom = "客厅";
-  this->m_BedRoom = "卧室";
+	  this->m_SittingRoom = "客厅";
+	  this->m_BedRoom = "卧室";
 }
 
 // todo 类外实现成员函数
-goodGay::goodGay()
+goodGay1::goodGay1()
 {
-  building = new Building;
+	building = new Building2;
 }
 
 // todo 类外实现成员函数
-void goodGay::visit()
+void goodGay1::visit()
 {
-  cout << "好基友正在访问" << building->m_SittingRoom << endl;
-  cout << "好基友正在访问" << building->m_BedRoom << endl; // todo 开放了m_BedRoom的访问权限给visit
+	  cout << "好基友正在访问" << building->m_SittingRoom << endl;
+	  cout << "好基友正在访问" << building->m_BedRoom << endl; // todo 开放了m_BedRoom的访问权限给visit
 }
 
-void goodGay::visit2()
+void goodGay1::visit2()
 {
-  cout << "好基友正在访问" << building->m_SittingRoom << endl;
-  // cout << "好基友正在访问" << building->m_BedRoom << endl;  // todo 只给visit成员函数开放了友元权限
+	  cout << "好基友正在访问" << building->m_SittingRoom << endl;
+	  // cout << "好基友正在访问" << building->m_BedRoom << endl;  // todo 只给visit成员函数开放了友元权限
 }
 
-void test01()
+void test06()
 {
-  goodGay gg;
-  gg.visit();
+	  goodGay1 gg;
+	  gg.visit();
 }
 
-int main()
+int main21()
 {
 
-  test01();
+	  test06();
 
-  system("pause");
-  return 0;
+	  system("pause");
+	  return 0;
 }

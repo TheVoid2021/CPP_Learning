@@ -2,9 +2,9 @@
 using namespace std;
 
 /*
-! 程序运行时产生的数据都属于临时数据，程序一旦运行结束都会被释放
-! 通过 *文件可以将数据持久化*
-! C++中对文件操作需要包含头文件 <fstream>
+? 程序运行时产生的数据都属于临时数据，程序一旦运行结束都会被释放
+? 通过 *文件可以将数据持久化*
+? C++中对文件操作需要包含头文件 <fstream>
 ? 文件类型分为两种：
   * 1. 文本文件     -  文件以文本的 *ASCII码* 形式存储在计算机中
   * 2. 二进制文件   -  文件以文本的 *二进制* 形式存储在计算机中，用户一般不能直接读懂它们
@@ -14,7 +14,7 @@ using namespace std;
   * 2. ifstream： 读操作
   * 3. fstream ： 读写操作
 
-! 写文件步骤如下：
+? 写文件步骤如下：
 ? 1. 包含头文件
    * \#include <fstream\>
 ? 2. 创建流对象
@@ -26,7 +26,7 @@ using namespace std;
 ? 5. 关闭文件
    * ofs.close();
 
-! 文件打开方式：
+? 文件打开方式：
 | 打开方式    | 解释                       |
 | ----------- | -------------------------- |
 | ios::in     | 为读文件而打开文件         |
@@ -41,7 +41,7 @@ using namespace std;
 
 #include <fstream>
 
-void test01()
+void test32()
 {
   ofstream ofs;
   ofs.open("test.txt", ios::out);
@@ -53,10 +53,10 @@ void test01()
   ofs.close();
 }
 
-int main()
+int main42()
 {
 
-  test01();
+  test32();
 
   system("pause");
 

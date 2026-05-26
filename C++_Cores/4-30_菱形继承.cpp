@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
-! 菱形继承概念：
+? 菱形继承概念：
   * 两个派生类继承同一个基类
   * 又有某个类同时继承者两个派生类
   * 这种继承被称为菱形继承，或者钻石继承
@@ -16,8 +16,8 @@ public:
   int m_Age;
 };
 
-// ! 继承前加virtual关键字后，变为虚继承
-// ! 此时公共的父类Animal称为虚基类
+// ? 继承前加virtual关键字后，变为虚继承
+// ? 此时公共的父类Animal称为虚基类
 class Sheep : virtual public Animal
 {
 };
@@ -28,7 +28,7 @@ class SheepTuo : public Sheep, public Tuo
 {
 };
 
-void test01()
+void test24()
 {
   SheepTuo st;
   st.Sheep::m_Age = 100;
@@ -38,13 +38,13 @@ void test01()
   cout << "st.Sheep::m_Age = " << st.Sheep::m_Age << endl;
   cout << "st.Tuo::m_Age = " << st.Tuo::m_Age << endl;
   cout << "st.m_Age = " << st.m_Age << endl; // todo 虚继承后，子类继承的属性只有一个，可以不用作用域区分
-  // ! 虚继承其实是在子类中添加一个指针，指向虚基类，通过指针访问虚基类的数据
+  // ? 虚继承其实是在子类中添加一个指针，指向虚基类，通过指针访问虚基类的数据
 }
 
-int main()
+int main35()
 {
 
-  test01();
+  test24();
 
   system("pause");
 

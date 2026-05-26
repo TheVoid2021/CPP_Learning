@@ -3,7 +3,7 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="C++_Basics/C++_Basics.vcxproj" />
-  <Project Path="C++_Cores/C++_Cores.vcxproj" />
-  <Project Path="C++_Raised/C++_Raised.vcxproj" />
+  <Project Path="C++_Basics/C++_Basics.vcxproj" Id="645fc267-cb04-4fb5-8fba-a924d66d3e9f" />
+  <Project Path="C++_Cores/C++_Cores.vcxproj" Id="0d2a5d7f-38db-4792-b7ac-cf87650274b4" />
+  <Project Path="C++_Raised/C++_Raised.vcxproj" Id="e6502295-1307-4adf-bfb7-2a65d6b78144" />
 </Solution>

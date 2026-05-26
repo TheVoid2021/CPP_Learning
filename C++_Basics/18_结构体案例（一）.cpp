@@ -29,8 +29,8 @@ void allocateSpace(Teacher tArray[], int len)
 
     for (int j = 0; j < 5; j++)
     {
-      tArray[i].sArray[j].name = sName + nameSeed[j];
-      tArray[i].sArray[j].score = rand() % 61 + 40;
+      tArray[i].sArray[j].name = sName + nameSeed[j]; // 学生姓名
+      tArray[i].sArray[j].score = rand() % 61 + 40;  // 随机生成40-100分
     }
   }
 }

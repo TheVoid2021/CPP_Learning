@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
-! 职工管理系统可以用来管理公司内所有员工的信息
+? 职工管理系统可以用来管理公司内所有员工的信息
 * 本教程主要利用C++来实现一个基于多态的职工管理系统
 ? 公司中职工分为三类：普通员工、经理、老板，显示信息时，需要显示职工编号、职工姓名、职工岗位、以及职责
     * 普通员工职责：完成经理交给的任务
@@ -13,7 +13,7 @@ using namespace std;
  */
 
 /*
-! 职工抽象基类
+? 职工抽象基类
   * 职工的分类为：普通员工、经理、老板
   * 将三种职工抽象到一个类（worker）中,利用多态管理不同职工种类
   * 职工的属性为：职工编号、职工姓名、职工所在部门编号
@@ -33,7 +33,7 @@ public:
 };
 
 /*
-! 普通员工类
+? 普通员工类
 * 普通员工类 继承 职工抽象类，并重写父类中纯虚函数
  */
 class Employee : public Worker
@@ -64,7 +64,7 @@ public:
 };
 
 /*
-! 经理类
+? 经理类
 * 经理类 继承 职工抽象类，并重写父类中纯虚函数，和普通员工类似 */
 class Manager : public Worker
 {
@@ -93,7 +93,7 @@ public:
 };
 
 /*
-! 老板类
+? 老板类
 * 老板类 继承 职工抽象类，并重写父类中纯虚函数，和普通员工类似 */
 class Boss : public Worker
 {
@@ -121,7 +121,7 @@ public:
   }
 };
 
-// ! 工人管理者类
+// ? 工人管理者类
 class WorkerManager
 {
 public:
@@ -152,7 +152,7 @@ public:
     ifs >> ch;
     if (ifs.eof())
     {
-      cout << "文件为空!" << endl;
+      cout << "文件为空?" << endl;
       this->m_EmpNum = 0;
       this->m_FileIsEmpty = true;
       this->m_EmpArray = NULL;
@@ -686,7 +686,7 @@ public:
   bool m_FileIsEmpty;
 };
 
-void test()
+void tests()
 {
   Worker *worker = NULL;
   worker = new Employee(1, "张三", 1);
@@ -702,7 +702,7 @@ void test()
   delete worker;
 }
 
-int main()
+int main46()
 {
 
   WorkerManager wm;
@@ -747,7 +747,7 @@ int main()
     }
   }
 
-  // test();
+  // tests();
 
   system("pause");
   return 0;

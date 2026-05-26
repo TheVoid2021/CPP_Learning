@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
-! 继承的好处：可以减少重复的代码
+? 继承的好处：可以减少重复的代码
 todo class A : public B;
 todo A 类称为子类 或 派生类
 todo B 类称为父类 或 基类
@@ -13,7 +13,7 @@ todo B 类称为父类 或 基类
  */
 
 // todo 公共页面
-class BasePage // !基类 父类
+class BasePage // ?基类 父类
 {
 public:
   void header()
@@ -32,34 +32,34 @@ public:
 };
 
 // todo Java页面
-class Java : public BasePage // !继承公共页面 共性 子类 派生类
+class Java : public BasePage // ?继承公共页面 共性 子类 派生类
 {
 public:
   void content()
   {
-    cout << "JAVA学科视频" << endl; // !个性
+    cout << "JAVA学科视频" << endl; // ?个性
   }
 };
 // todo Python页面
-class Python : public BasePage // !继承公共页面 共性 子类 派生类
+class Python : public BasePage // ?继承公共页面 共性 子类 派生类
 {
 public:
   void content()
   {
-    cout << "Python学科视频" << endl; // !个性
+    cout << "Python学科视频" << endl; // ?个性
   }
 };
 // todo C++页面
-class CPP : public BasePage // !继承公共页面 共性 子类 派生类
+class CPP : public BasePage // ?继承公共页面 共性 子类 派生类
 {
 public:
   void content()
   {
-    cout << "C++学科视频" << endl; // !个性
+    cout << "C++学科视频" << endl; // ?个性
   }
 };
 
-void test01()
+void test17()
 {
   // Java页面
   cout << "Java下载视频页面如下： " << endl;
@@ -88,10 +88,10 @@ void test01()
   cp.content();
 }
 
-int main()
+int main29()
 {
 
-  test01();
+  test17();
 
   system("pause");
 

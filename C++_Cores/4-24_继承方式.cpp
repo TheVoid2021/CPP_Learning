@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
-! 继承方式
+? 继承方式
 todo 继承的语法：  class 子类 : 继承方式  父类
 ? 继承方式一共有三种：
   * 公共继承
@@ -23,14 +23,14 @@ private:
   int m_C;
 };
 
-// !公共继承
+// ?公共继承
 class Son1 : public Base1
 {
 public:
   void func()
   {
-    m_A; // !可访问 public权限
-    m_B; // !可访问 protected权限
+    m_A; // ?可访问 public权限
+    m_B; // ?可访问 protected权限
     // m_C; //不可访问
   }
 };
@@ -41,7 +41,7 @@ void myClass()
   s1.m_A; // 其他类只能访问到公共权限
 }
 
-// !保护继承
+// ?保护继承
 class Base2
 {
 public:
@@ -58,8 +58,8 @@ class Son2 : protected Base2
 public:
   void func()
   {
-    m_A; // !可访问 protected权限
-    m_B; // !可访问 protected权限
+    m_A; // ?可访问 protected权限
+    m_B; // ?可访问 protected权限
     // m_C; //不可访问
   }
 };
@@ -69,7 +69,7 @@ void myClass2()
   // s.m_A; //不可访问
 }
 
-// !私有继承
+// ?私有继承
 class Base3
 {
 public:
@@ -86,8 +86,8 @@ class Son3 : private Base3
 public:
   void func()
   {
-    m_A; // !可访问 private权限
-    m_B; // !可访问 private权限
+    m_A; // ?可访问 private权限
+    m_B; // ?可访问 private权限
     // m_C; //不可访问
   }
 };

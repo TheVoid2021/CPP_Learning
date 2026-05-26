@@ -20,7 +20,7 @@ void swap(int num1, int num2)
   cout << "num1 = " << num1 << endl;
   cout << "num2 = " << num2 << endl;
 
-  // return ; 当函数声明时候，不需要返回值，可以不写return
+  // todo return ; 当函数声明时候，不需要返回值，可以不写return
 }
 
 int main151()
@@ -31,8 +31,11 @@ int main151()
 
   swap(a, b);
 
-  cout << "main中的 a 还是= " << a << endl;
-  cout << "main中的 b 还是= " << b << endl;
+  cout << "main中的 a 还是= " << a << endl; // ? 10
+  cout << "main中的 b 还是= " << b << endl; // ? 20
+
+  // todo 值传递，实参的值发生变化，但不会影响到形参的值
+  // todo 如果想要真正交换 a 和 b 的值，需要使用引用传递或指针
 
   system("pause");
 

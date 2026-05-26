@@ -32,7 +32,7 @@ int main157()
   *p2 = 100; // 正确
 
   // !const既修饰指针又修饰常量，指针指向和指针指向的值都不可以改
-  const int *const p3 = &a; // 常量指针常量
+  const int *const p3 = &a; // todo 常量指针常量
   // p3 = &b; //错误
   //*p3 = 100; //错误
 
